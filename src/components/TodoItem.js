@@ -39,18 +39,23 @@ componentDidMount(){
   }
   
   return (
-   <div style={this.getStyle()}>
+   <li className="item" style={this.getStyle()}>
      <div className="item--done" style={veiwStyle}>
-      <input type="checkbox" onChange={this.props.markTodo.bind(this, id)}/>
-      {this.state.changedTitle}
-      <button onClick={this.handleEditing.bind(this, id)}>edit</button> 
-      <button onClick={this.props.delTodo.bind(this, id)}>delete</button>
+      <div className="task">
+          <input type="checkbox" onChange={this.props.markTodo.bind(this, id)}/>
+        {this.state.changedTitle}
+      </div>
+      <div className="manage-btns">
+        <button className="btn btn--edit" onClick={this.handleEditing.bind(this, id)}>edit</button> 
+        <button className="btn btn--delete" onClick={this.props.delTodo.bind(this, id)}>delete</button>
+      </div>
+      
      </div>
      <div className="item--edit" style={editStyle}>
-      <input type="text"  value={this.state.changedTitle} onChange={this.handleEditingChange.bind(this)}/>
-      <input type="submit" onClick={this.handleEditingDone.bind(this)} />
+      <input type="text" className="input input-editing" value={this.state.changedTitle} onChange={this.handleEditingChange.bind(this)}/>
+      <input type="submit" value="Save" className="btn btn--edit-done" onClick={this.handleEditingDone.bind(this)} />
      </div> 
-   </div>
+   </li>
   )
  }
 }

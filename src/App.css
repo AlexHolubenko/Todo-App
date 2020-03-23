@@ -1,10 +1,8 @@
 .App {
   text-align: center;
-  background: #ad5389;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #3c1053, #ad5389);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #3c1053, #ad5389); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: #3a1c71;  /* fallback for old browsers */
   box-shadow: 10px 10px 10px 0 rgba(0,0,0, 0.5);
-  border-radius: 30px;
+  border-radius: 5px;
   color: white;
   font-size: 1.6rem;
   max-width: 50rem;
@@ -13,7 +11,56 @@
   padding: 0 0 10px;
   height: 100%;
 }
-
 .adding-field {
   margin-bottom: 15px;
+}
+.input {
+  margin: 0;
+  border: none;
+  border-radius: 0;
+  width: 75%;
+  padding: 10px;
+  font-size: 16px;
+}
+/*****************buttons********************/
+.btn {
+  padding: 10px;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+  border:none;
+}
+.btn--add-todo {
+  background: #3c1053;
+  color: white;
+}
+.btn--edit{
+  background: #66ccff;
+}
+.btn--delete {
+  background: #ffaf7b;
+}
+.item {
+  cursor: pointer;
+  list-style-type: none;
+  background: #eee;
+  font-size: 16px;
+  transition: 0.2s;
+  color: black;
+}
+.item:nth-child(odd) {
+  background: #f9f9f9;
+}
+.item--done {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%; 
+}
+.input-editing {
+  width: 90%;
+}
+.task input {
+  margin-right: 10px;
 }
